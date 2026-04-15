@@ -42,7 +42,7 @@ const updateStockPrices = () => {
 onMounted(() => {
   loadStocks()
   // Update prices every second
-  priceUpdateInterval = setInterval(updateStockPrices, 1000)
+  priceUpdateInterval = setInterval(updateStockPrices, 2000)
 })
 
 onUnmounted(() => {
