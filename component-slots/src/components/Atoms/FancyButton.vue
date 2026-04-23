@@ -3,18 +3,24 @@
     const hover = ref(false)
 
     const props = defineProps({
-        url: {type: String, default: '#'}
+        href: {type: String, default: '#'}
     })
 
-    const navigateToLink = () => {
-      if(props.url && props.url !== '#') {
-        window.open(props.url, '_blank');
-      }
+    const navigate = () => {
+    if (props.href !== '#') {
+        window.open(props.href, '_blank'); // Opens link in new tab
     }
+}
+
 </script>
 
 <template>
-  <button class="btn btn-primary" @mouseenter="hover = true" random="Hello" @mouseleave="hover = false" @click="navigateToLink">
+  <button class="btn btn-primary" 
+    @mouseenter="hover = true" 
+    @click="navigate"
+    @mouseleave="hover = false"
+  >
+  
     <slot name="icon" :hover="hover">🎯</slot>
     <slot>Click Me</slot>
   </button>
