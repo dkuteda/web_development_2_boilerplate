@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import EmployeesCardGrid from './components/Templates/EmployeesCardGrid.vue';
 import AppAlerts from './components/Molecules/AppAlerts.vue';
 
+
+
 function handleClose(){
   console.log('Alert closed');
 }
@@ -15,11 +17,17 @@ function handleClose(){
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <AppAlerts type="info" @closed="handleClose">New software update available.</AppAlerts>
-    <AppAlerts type="success" @closed="handleClose">Operation completed successfully.</AppAlerts>
-    <AppAlerts type="warning" @closed="handleClose">Please check your input.</AppAlerts>
-    <AppAlerts type="error" @closed="handleClose">An error occurred.</AppAlerts>
 
+  <div id="nav">
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/brazil">Brazil</RouterLink>
+    <RouterLink to="/hawaii">Hawaii</RouterLink>
+    <RouterLink to="/jamaica">Jamaica</RouterLink>
+    <RouterLink to="/panama">Panama</RouterLink>
   </div>
+  
+  <div class="container">
+    <router-view></router-view>
+  </div>
+  
 </template>
