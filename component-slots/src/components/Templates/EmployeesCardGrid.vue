@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import EmployeeCard from '../Organisms/EmployeeCard.vue';
 
 const employees = ref([
-    { name: 'David Kutej', githubUsername: 'dkuteda', position: 'Software Engineer', imageUrl: new URL('@/assets/images/PicOfMeDavid.jpg', import.meta.url).href, alt: 'David Kutej'},
+    { githubUsername: 'dkuteda', alt: 'David Kutej'},
 ])
 </script>
 
@@ -12,10 +12,8 @@ const employees = ref([
         <EmployeeCard
             v-for="employee in employees"
             :key="employee.githubUsername"
-            :name="employee.name"
+
             :githubUsername="employee.githubUsername"
-            :position="employee.position"
-            :imageUrl="employee.imageUrl"
             :alt="employee.alt"
         />
     </div>
