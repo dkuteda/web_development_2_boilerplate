@@ -12,12 +12,12 @@ const people = ref([
 const applicants = computed(() => people.value.filter(person => !person.isStaff))
 const staffMembers = computed(() => people.value.filter(person => person.isStaff))
 
-const addToStaff = (employee) => {
+const addToStaff = (username) => {
     const person = people.value.find(p => p.githubUsername === username);
     if (person) person.isStaff = true;
 }
 
-const removeFromStaff = (employee) => {
+const removeFromStaff = (username) => {
     const person = people.value.find(p => p.githubUsername === username);
     if (person) person.isStaff = false;
 }
@@ -32,6 +32,7 @@ const removeFromStaff = (employee) => {
 
             :githubUsername="person.githubUsername"
             :alt="person.alt"
+            :isStaff="person.isStaff"
             @hire="addToStaff"
         />
     </section>
@@ -41,8 +42,10 @@ const removeFromStaff = (employee) => {
         <PersonCard
             v-for="person in staffMembers"
             :key="person.githubUsername"
+            
             :githubUsername="person.githubUsername"
             :alt="person.alt"
+            :isStaff="person.isStaff"
             @fire="removeFromStaff"
         />
     </section>

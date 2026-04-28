@@ -39,12 +39,12 @@ const emit = defineEmits(['hire', 'fire'])
                     Visit
                 </FancyButton>
 
-                <FancyButton v-if="!isStaff" @click="emit('hire', employeeData.name)">
+                <FancyButton v-if="!isStaff" @click="emit('hire', props.githubUsername)">
                     <template #icon="{ hover }">{{ hover ? '🙌' : '🤝' }}</template>
                     Hire
                 </FancyButton>
 
-                <FancyButton v-else @click="emit('fire', employeeData.name)">
+                <FancyButton v-else @click="emit('fire', props.githubUsername)">
                     <template #icon="{ hover }">{{ hover ? '❌' : '🚫' }}</template>
                     Fire
                 </FancyButton>
