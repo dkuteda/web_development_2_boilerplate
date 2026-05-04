@@ -1,0 +1,1 @@
+CREATE TABLE `farm_management_system`.`InventoryItem` (`InventoryItemId` INT NOT NULL AUTO_INCREMENT , `InventoryItemName` VARCHAR(50) NULL DEFAULT NULL , `Category` VARCHAR(50) NOT NULL , `StockLevel` INT NOT NULL , `Description` TEXT NOT NULL , `Status` VARCHAR(50) NOT NULL , PRIMARY KEY (`InventoryItemId`)) ENGINE = InnoDB;
