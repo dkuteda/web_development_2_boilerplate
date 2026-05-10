@@ -46,7 +46,7 @@ class InventoryItemRepository extends Repository implements IInventoryItemReposi
     }
 
     // Other CRUD methods (create, update, delete) would go here
-    public function findById(int $id): ?InventoryItem
+    public function getInventoryItemById(int $id): ?InventoryItem
     {
         $sql = "SELECT InventoryItemId, InventoryItemName, StockLevel, Description, Category, Status 
                 FROM InventoryItem 
@@ -66,7 +66,7 @@ class InventoryItemRepository extends Repository implements IInventoryItemReposi
     /**
      * Create: Insert a new inventory item
      */
-    public function create(InventoryItem $inventoryItem): ?int
+    public function createInventoryItem(InventoryItem $inventoryItem): ?int
     {
         $sql = "INSERT INTO InventoryItem (InventoryItemName, StockLevel, Description, Category, Status) 
                 VALUES (:name, :stock, :description, :category, :status)";
@@ -85,7 +85,7 @@ class InventoryItemRepository extends Repository implements IInventoryItemReposi
     /**
      * Update: Modify an existing item
      */
-    public function update(InventoryItem $inventoryItem): bool
+    public function updateInventoryItem(InventoryItem $inventoryItem): bool
     {
         $sql = "UPDATE InventoryItem 
                 SET InventoryItemName = :name, 
@@ -106,7 +106,7 @@ class InventoryItemRepository extends Repository implements IInventoryItemReposi
     }
 
     // DELETE: Deactivate an item (soft delete)
-    public function archive(int $id): bool
+    public function archiveInventoryItem(int $id): bool
     {
         try {
             $stmt = $this->getConnection()->prepare("UPDATE InventoryItem SET Status = 'archived' WHERE InventoryItemId = :id");

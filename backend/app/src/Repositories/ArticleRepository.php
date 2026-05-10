@@ -7,6 +7,7 @@ namespace App\Repositories;
 
 use App\Models\Article;
 use App\Utils\JsonStore;
+use App\Repositories\Interfaces\IArticleRepository;
 
 class ArticleRepository implements IArticleRepository
 {

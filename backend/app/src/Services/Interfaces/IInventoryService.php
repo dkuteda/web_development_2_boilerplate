@@ -1,9 +1,10 @@
 <?php
-namespace App\Repositories\Interfaces;
+
+namespace App\Services\Interfaces;
 
 use App\Models\InventoryItem;
 
-interface IInventoryItemRepository
+interface IInventoryService
 {
     public function getInventoryItems(?string $term = null, ?string $category = null): array;
     public function getInventoryItemById(int $id): ?InventoryItem;

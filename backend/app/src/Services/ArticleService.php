@@ -3,8 +3,9 @@
 namespace App\Services;
 
 use App\Models\Article;
-use App\Repositories\IArticleRepository;
+use App\Repositories\Interfaces\IArticleRepository;
 use App\Repositories\ArticleRepository;
+use App\Services\Interfaces\IArticleService;
 
 class ArticleService implements IArticleService
 {
