@@ -4,8 +4,9 @@ namespace App\Repositories;
 use App\Framework\Repository;
 use App\Models\InventoryItem;
 use App\Repositories\Interfaces\IInventoryItemRepository;
+use PDO;
 
-class InventoryItemRepository extends Repository implements IInventoryItemRepository 
+class InventoryItemRepository extends Repository implements IInventoryItemRepository
 {
     public function getInventoryItems(?string $term = null, ?string $category = null): array
     {
