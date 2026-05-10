@@ -1,7 +1,7 @@
 <?php
-namespace App\Models;
+namespace App\Enums;
 
-enum ProductCategory: string
+enum ShedItemCategory: string
 {
     case Soil = 'soil';
     case Planting = 'planting';
