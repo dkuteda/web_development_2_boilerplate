@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Article;
-use App\Services\IArticleService;
+use App\Services\Interfaces\IArticleService;
 use App\Services\ArticleService;
 use App\Framework\Controller;
 

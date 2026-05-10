@@ -10,9 +10,9 @@ class InventoryItemService implements IInventoryService
 {
     private IInventoryItemRepository $repository;
 
-    public function __construct(IInventoryItemRepository $repository)
+    public function __construct()
     {
-        $this->repository = $repository;
+        $this->repository = new InventoryItemRepository();
     }
 
     public function getInventoryItems(?string $term = null, ?string $category = null): array
