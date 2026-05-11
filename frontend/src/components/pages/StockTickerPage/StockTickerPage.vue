@@ -1,3 +1,4 @@
+@ -1,54 +0,0 @@
 <template>
   <StockTickerTemplate>
     <StockList :stocks="stocks" :columns="2" />

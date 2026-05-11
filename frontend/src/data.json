@@ -1,0 +1,26 @@
+[
+    {
+        "InventoryItemId": 1,
+        "InventoryItemName": "Premium Potting Mix",
+        "Category": "soil",
+        "StockLevel": 45,
+        "Description": "High-quality organic potting soil enriched with compost and perlite for optimal drainage.",
+        "Status": "active"
+    },
+    {
+        "InventoryItemId": 2,
+        "InventoryItemName": "Heirloom Tomato Seeds",
+        "Category": "planting",
+        "StockLevel": 120,
+        "Description": "Packet of 50 organic Brandywine tomato seeds, non-GMO and open-pollinated.",
+        "Status": "active"
+    },
+    {
+        "InventoryItemId": 3,
+        "InventoryItemName": "Neem Oil Concentrate",
+        "Category": "pest_control",
+        "StockLevel": 15,
+        "Description": "Organic cold-pressed neem oil for controlling aphids, mites, and fungal diseases.",
+        "Status": "active"
+    }
+]
