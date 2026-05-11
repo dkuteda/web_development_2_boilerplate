@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import EmployeesCardGrid from './components/Templates/EmployeesCardGrid.vue';
 import AppAlerts from './components/Molecules/AppAlerts.vue';
+import TheNavigation from './components/Pages/TheNavigation.vue';
 
 
 
@@ -18,13 +19,7 @@ function handleClose(){
 
 <template>
 
-  <div id="nav">
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/brazil">Brazil</RouterLink>
-    <RouterLink to="/hawaii">Hawaii</RouterLink>
-    <RouterLink to="/jamaica">Jamaica</RouterLink>
-    <RouterLink to="/panama">Panama</RouterLink>
-  </div>
+  <TheNavigation />
   
   <div class="container">
     <router-view></router-view>

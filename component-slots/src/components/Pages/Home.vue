@@ -5,7 +5,7 @@
             <RouterLink 
                 v-for="destination in destinations" 
                 :key="destination.id" 
-                :to="`/${destination.slug}`">
+                :to="{name: 'destination.show', params: {id: destination.id}}">
                 <h2 class="text-2xl font-semibold">{{ destination.name }}</h2>
                 <img :src="getImgUrl(destination.image)" :alt="destination.name"/>
             </RouterLink>
